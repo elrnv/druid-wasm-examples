@@ -1,0 +1,15 @@
+{
+  "name": "druid-wasm-examples",
+  "collaborators": [
+    "Egor Larionov <egor.larionov@gmail.com>"
+  ],
+  "version": "0.1.0",
+  "files": [
+    "druid_wasm_examples_bg.wasm",
+    "druid_wasm_examples.js",
+    "druid_wasm_examples.d.ts"
+  ],
+  "module": "druid_wasm_examples.js",
+  "types": "druid_wasm_examples.d.ts",
+  "sideEffects": false
+}
