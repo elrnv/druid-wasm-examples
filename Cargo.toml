@@ -1,0 +1,35 @@
+[package]
+name = "druid-wasm-examples"
+version = "0.1.0"
+authors = ["Egor Larionov <egor.larionov@gmail.com>"]
+edition = "2018"
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+[features]
+default = [ "console_error_panic_hook", "console_log" ]
+#wasm_log = [ "console_log", "druid/console_log" ]
+
+[dependencies]
+druid = { git = "https://github.com/elrnv/druid.git", features = ["image"] }
+wasm-bindgen = "0.2.30"
+console_error_panic_hook = { version = "0.1.1", optional = true }
+instant = { version = "0.1", features = [ "wasm-bindgen" ] }
+log = "0.4.8"
+cfg-if = "0.1.10"
+console_log = { version = "0.1.2", optional = true }
+
+[dependencies.web-sys]
+version = "0.3"
+features = ["console"]
+
+[patch.crates-io]
+piet = { git = "https://github.com/elrnv/piet.git" }
+piet-web = { git = "https://github.com/elrnv/piet.git" }
+piet-common = { git = "https://github.com/elrnv/piet.git" }
+
+[profile.release]
+opt-level = 'z' # or 's'
+lto = true
+
