@@ -2,6 +2,12 @@
 name = "druid-wasm-examples"
 version = "0.1.0"
 authors = ["Egor Larionov <egor.larionov@gmail.com>"]
+license = "Apache-2.0"
+description = "Druid examples for in the browser"
+repository = "https://github.com/elrnv/druid-wasm-examples"
+categories = ["gui", "wasm"]
+readme = "README.md"
+keywords = ["gui", "ui", "examples", "wasm"]
 edition = "2018"
 
 [lib]
