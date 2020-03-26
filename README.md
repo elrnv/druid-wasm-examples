@@ -24,10 +24,10 @@ Then go to the `html` directory and run
 > npm run serve
 ```
 
-which should spin up a server serving the html documents running our examples.
+which should start a server with our examples served in individual html documents.
 
 Finally point your browser to the appropriate localhost url (usually http://localhost:8080) and you
-should see a page with a list of links --- one for each example.
+should see a page with a list of links, one for each example.
 
 # Status
 
