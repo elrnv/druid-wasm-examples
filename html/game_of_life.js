@@ -1,5 +1,8 @@
-const rust = import('../pkg/druid_wasm_examples');
+import init, { game_of_life } from '../pkg/druid_wasm_examples.js';
 
-rust
-  .then(m => m.game_of_life())
-  .catch(console.error);
+async function run() {
+    await init();
+    game_of_life();
+}
+
+run();

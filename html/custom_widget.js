@@ -1,5 +1,8 @@
-const rust = import('../pkg/druid_wasm_examples');
+import init, { custom_widget } from '../pkg/druid_wasm_examples.js';
 
-rust
-  .then(m => m.custom_widget())
-  .catch(console.error);
+async function run() {
+    await init();
+    custom_widget();
+}
+
+run();

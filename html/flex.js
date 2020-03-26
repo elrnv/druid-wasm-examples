@@ -1,5 +1,8 @@
-const rust = import('../pkg/druid_wasm_examples');
+import init, { flex } from '../pkg/druid_wasm_examples.js';
 
-rust
-  .then(m => m.flex())
-  .catch(console.error);
+async function run() {
+    await init();
+    flex();
+}
+
+run();

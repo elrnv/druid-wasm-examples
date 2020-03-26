@@ -1,5 +1,8 @@
-const rust = import('../pkg/druid_wasm_examples');
+import init, { lens } from '../pkg/druid_wasm_examples.js';
 
-rust
-  .then(m => m.lens())
-  .catch(console.error);
+async function run() {
+    await init();
+    lens();
+}
+
+run();

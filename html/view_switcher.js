@@ -1,5 +1,8 @@
-const rust = import('../pkg/druid_wasm_examples');
+import init, { view_switcher } from '../pkg/druid_wasm_examples.js';
 
-rust
-  .then(m => m.view_switcher())
-  .catch(console.error);
+async function run() {
+    await init();
+    view_switcher();
+}
+
+run();

@@ -1,5 +1,8 @@
-const rust = import('../pkg/druid_wasm_examples');
+import init, { timer } from '../pkg/druid_wasm_examples.js';
 
-rust
-  .then(m => m.timer())
-  .catch(console.error);
+async function run() {
+    await init();
+    timer();
+}
+
+run();

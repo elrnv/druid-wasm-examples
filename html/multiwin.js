@@ -1,5 +1,8 @@
-const rust = import('../pkg/druid_wasm_examples');
+import init, { multiwin } from '../pkg/druid_wasm_examples.js';
 
-rust
-  .then(m => m.multiwin())
-  .catch(console.error);
+async function run() {
+    await init();
+    multiwin();
+}
+
+run();

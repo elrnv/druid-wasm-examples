@@ -1,5 +1,8 @@
-const rust = import('../pkg/druid_wasm_examples');
+import init, { scroll_colors } from '../pkg/druid_wasm_examples.js';
 
-rust
-  .then(m => m.scroll_colors())
-  .catch(console.error);
+async function run() {
+    await init();
+    scroll_colors();
+}
+
+run();

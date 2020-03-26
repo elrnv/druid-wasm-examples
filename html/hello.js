@@ -1,5 +1,8 @@
-const rust = import('../pkg/druid_wasm_examples');
+import init, { hello } from '../pkg/druid_wasm_examples.js';
 
-rust
-  .then(m => m.hello())
-  .catch(console.error);
+async function run() {
+    await init();
+    hello();
+}
+
+run();
