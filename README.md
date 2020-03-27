@@ -32,30 +32,30 @@ should see a page with a list of links, one for each example.
 
 Examples that are known to be working (on par with native) are marked below.
 
- [x] anim
- [x] calc
- [x] custom_widget
- [x] either
- [ ] ext_event (No thread support on wasm)
- [x] flex
- [x] game_of_life
- [x] hello
- [x] identity
- [ ] image (Can't load an image from a local file)
- [x] layout
- [x] lens
- [x] list
- [x] multiwin
- [x] panels
- [x] parse
- [x] scroll_colors
- [x] scroll
- [x] split_demo
- [x] styled_text
- [ ] svg (usvg doesn't compile on usvg at the time of this writing)
- [x] switch_demo
- [x] timer
- [x] view_switcher
+ - [x] anim
+ - [x] calc
+ - [x] custom_widget
+ - [x] either
+ - [ ] ext_event (No thread support on wasm)
+ - [x] flex
+ - [x] game_of_life
+ - [x] hello
+ - [x] identity
+ - [ ] image (Can't load an image from a local file)
+ - [x] layout
+ - [x] lens
+ - [x] list
+ - [x] multiwin
+ - [x] panels
+ - [x] parse
+ - [x] scroll_colors
+ - [x] scroll
+ - [x] split_demo
+ - [x] styled_text
+ - [ ] svg (usvg doesn't compile on usvg at the time of this writing)
+ - [x] switch_demo
+ - [x] timer
+ - [x] view_switcher
 
 # Acknowledgements
 
