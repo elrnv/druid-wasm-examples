@@ -8,25 +8,24 @@ tutorial](https://rustwasm.github.io/docs/book/game-of-life/introduction.html).
 
 # Building
 
-After following the tutorial, it is assumed that you have all the required tools and libraries set
-up on your system (`cargo`, `wasm-pack`, `npm`).
+You will need `cargo` and `wasm-pack` for building the code and a simple
+server like [`http`](https://crates.io/crates/https) for serving the web pages.
 
 First build the examples with
 
 ```
-> wasm-pack build
+> wasm-pack build --target web
 ```
 
-Then go to the `html` directory and run
+Then run the server from the root directory with
 
 ```
-> npm install
-> npm run serve
+> http
 ```
 
 which should start a server with our examples served in individual html documents.
 
-Finally point your browser to the appropriate localhost url (usually http://localhost:8080) and you
+Finally point your browser to the appropriate localhost url (usually http://localhost:8000) and you
 should see a page with a list of links, one for each example.
 
 # Status
