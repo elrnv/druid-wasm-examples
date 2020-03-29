@@ -45,7 +45,7 @@ Examples that are known to be working (on par with native) are marked below.
  - [x] [layout](https://elrnv.github.io/druid-wasm-examples/html/layout.html)
  - [x] [lens](https://elrnv.github.io/druid-wasm-examples/html/lens.html)
  - [x] [list](https://elrnv.github.io/druid-wasm-examples/html/list.html)
- - [x] [multiwin](https://elrnv.github.io/druid-wasm-examples/html/multiwin.html) (No support for
+ - [ ] [multiwin](https://elrnv.github.io/druid-wasm-examples/html/multiwin.html) (No support for
    menus or multiple windows)
  - [x] [panels](https://elrnv.github.io/druid-wasm-examples/html/panels.html)
  - [x] [parse](https://elrnv.github.io/druid-wasm-examples/html/parse.html)
@@ -53,7 +53,7 @@ Examples that are known to be working (on par with native) are marked below.
  - [x] [scroll](https://elrnv.github.io/druid-wasm-examples/html/scroll.html)
  - [x] [split_demo](https://elrnv.github.io/druid-wasm-examples/html/split_demo.html)
  - [x] [styled_text](https://elrnv.github.io/druid-wasm-examples/html/styled_text.html)
- - [ ] svg (usvg doesn't compile on usvg at the time of this writing)
+ - [ ] svg (usvg doesn't compile for WASM at the time of this writing)
  - [x] [switch_demo](https://elrnv.github.io/druid-wasm-examples/html/switch_demo.html)
  - [x] [timer](https://elrnv.github.io/druid-wasm-examples/html/timer.html)
  - [x] [view_switcher](https://elrnv.github.io/druid-wasm-examples/html/view_switcher.html)
