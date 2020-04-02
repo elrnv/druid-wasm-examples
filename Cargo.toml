@@ -36,6 +36,5 @@ piet-web = { git = "https://github.com/elrnv/piet.git" }
 piet-common = { git = "https://github.com/elrnv/piet.git" }
 
 [profile.release]
-opt-level = 'z' # or 's'
+opt-level = 's' # or 'z'
 lto = true
-
