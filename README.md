@@ -41,7 +41,8 @@ Examples that are known to be working (on par with native) are marked below.
  - [x] [game_of_life](https://elrnv.github.io/druid-wasm-examples/html/game_of_life.html)
  - [x] [hello](https://elrnv.github.io/druid-wasm-examples/html/hello.html)
  - [x] [identity](https://elrnv.github.io/druid-wasm-examples/html/identity.html)
- - [ ] image (Can't load an image from a local file)
+ - [x] [image](https://elrnv.github.io/druid-wasm-examples/html/image.html) (Image is loaded at
+   compile time)
  - [x] [layout](https://elrnv.github.io/druid-wasm-examples/html/layout.html)
  - [x] [lens](https://elrnv.github.io/druid-wasm-examples/html/lens.html)
  - [x] [list](https://elrnv.github.io/druid-wasm-examples/html/list.html)
