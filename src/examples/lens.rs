@@ -31,7 +31,7 @@ pub fn main() {
 
 #[derive(Clone, Debug, Data, Lens)]
 struct MyComplexState {
-    #[druid(lens_name = "term_lens")]
+    #[lens(name = "term_lens")]
     term: String,
     scale: f64,
 }

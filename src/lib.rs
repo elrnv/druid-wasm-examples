@@ -2,24 +2,12 @@ use wasm_bindgen::prelude::*;
 
 mod examples;
 
-cfg_if::cfg_if! {
-    if #[cfg(feature = "console_log")] {
-        pub fn init_log() {
-            use log::Level;
-            console_log::init_with_level(Level::Trace).expect("error initializing log");
-        }
-    } else {
-        pub fn init_log() {}
-    }
-}
-
 macro_rules! impl_example {
     ($fn:ident) => {
         #[wasm_bindgen]
         pub fn $fn() {
             #[cfg(feature = "console_error_panic_hook")]
             std::panic::set_hook(Box::new(console_error_panic_hook::hook));
-            init_log();
             examples::$fn::main();
         }
     }

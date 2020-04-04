@@ -117,6 +117,7 @@ pub fn main() {
         LocalizedString::new("custom-widget-demo-window-title").with_placeholder("Fancy Colors"),
     );
     AppLauncher::with_window(window)
+        .use_simple_logger()
         .launch("Druid + Piet".to_string())
         .expect("launch failed");
 }

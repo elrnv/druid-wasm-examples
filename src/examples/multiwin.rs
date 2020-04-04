@@ -34,13 +34,13 @@ struct State {
 }
 
 pub fn main() {
-    //simple_logger::init().unwrap();
     let main_window = WindowDesc::new(ui_builder)
         .menu(make_menu(&State::default()))
         .title(
             LocalizedString::new("multiwin-demo-window-title").with_placeholder("Many windows!"),
         );
     AppLauncher::with_window(main_window)
+        .use_simple_logger()
         .delegate(Delegate)
         .launch(State::default())
         .expect("launch failed");
@@ -63,11 +63,11 @@ fn ui_builder() -> impl Widget<State> {
     let text = LocalizedString::new("hello-counter")
         .with_arg("count", |data: &State, _env| data.menu_count.into());
     let label = Label::new(text);
-    let inc_button = Button::<State>::new("Add menu item", |ctx, data, _env| {
+    let inc_button = Button::<State>::new("Add menu item").on_click(|ctx, data, _env| {
         data.menu_count += 1;
         ctx.set_menu(make_menu::<State>(data));
     });
-    let dec_button = Button::<State>::new("Remove menu item", |ctx, data, _env| {
+    let dec_button = Button::<State>::new("Remove menu item").on_click(|ctx, data, _env| {
         data.menu_count = data.menu_count.saturating_sub(1);
         ctx.set_menu(make_menu::<State>(data));
     });
@@ -181,7 +181,7 @@ fn make_menu<T: Data>(state: &State) -> MenuDesc<T> {
     if state.menu_count != 0 {
         base = base.append(
             MenuDesc::new(LocalizedString::new("Custom")).append_iter(|| {
-                (0..state.menu_count).map(|i| {
+                (1..state.menu_count + 1).map(|i| {
                     MenuItem::new(
                         LocalizedString::new("hello-counter")
                             .with_arg("count", move |_, _| i.into()),

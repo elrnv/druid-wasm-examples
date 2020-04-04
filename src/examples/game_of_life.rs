@@ -15,8 +15,9 @@
 //! Game of life
 
 use std::ops::{Index, IndexMut};
-use instant::{Duration, Instant};
+use std::time::{Duration};
 
+use instant::Instant;
 use druid::widget::prelude::*;
 use druid::widget::{Button, Flex, Label, Slider};
 use druid::{
@@ -375,28 +376,27 @@ fn make_widget() -> impl Widget<AppData> {
                     Flex::row()
                         .with_flex_child(
                             // pause / resume button
-                            Button::new(
-                                |data: &bool, _: &Env| match data {
-                                    true => "Resume".into(),
-                                    false => "Pause".into(),
-                                },
-                                |ctx, data: &mut bool, _: &Env| {
-                                    *data = !*data;
-                                    ctx.request_layout();
-                                },
-                            )
+                            Button::new(|data: &bool, _: &Env| match data {
+                                true => "Resume".into(),
+                                false => "Pause".into(),
+                            })
+                            .on_click(|ctx, data: &mut bool, _: &Env| {
+                                *data = !*data;
+                                ctx.request_layout();
+                            })
                             .lens(AppData::paused)
                             .padding((5., 5.)),
                             1.0,
                         )
                         .with_flex_child(
                             // clear button
-                            Button::new("Clear", |ctx, data: &mut Grid, _: &Env| {
-                                data.clear();
-                                ctx.request_paint();
-                            })
-                            .lens(AppData::grid)
-                            .padding((5., 5.)),
+                            Button::new("Clear")
+                                .on_click(|ctx, data: &mut Grid, _: &Env| {
+                                    data.clear();
+                                    ctx.request_paint();
+                                })
+                                .lens(AppData::grid)
+                                .padding((5., 5.)),
                             1.0,
                         )
                         .padding(8.0),
@@ -435,6 +435,7 @@ pub fn main() {
         grid.set_alive(x);
     }
     AppLauncher::with_window(window)
+        .use_simple_logger()
         .launch(AppData {
             grid,
             drawing: false,
