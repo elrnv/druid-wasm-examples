@@ -1,7 +1,7 @@
 # Druid examples in WASM
 
 This repository collects most of the Druid examples and arranges them (with very slight
-modifications) for building with `wasm-pack` and serving with `npm`.
+modifications) for building with `wasm-pack` and serving with a web server.
 
 To get started first check out the [rust wasm
 tutorial](https://rustwasm.github.io/docs/book/game-of-life/introduction.html).
